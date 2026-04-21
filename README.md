@@ -31,3 +31,45 @@ Scarabeo Arena è una piattaforma multiplayer online per il gioco dello Scarabeo
 │   ├── styles/         # Fogli di stile CSS
 │   └── index.html      # Entry point dell'applicazione
 └── package.json        # Dipendenze e script Node.js
+
+---
+## 📂 Struttura del Progetto
+
+Il progetto è diviso in due macro-aree:
+
+### ⚙️ BACKEND (Server)
+- `src/index.js`: Il punto d'ingresso del server Express.
+- `src/db/database.js`: Il motore di persistenza che gestisce utenti, partite e mosse.
+- `src/routes/`: Definizione degli endpoint API (`auth.js` e `games.js`).
+- `src/utils/bot-utils.js`: Logica decisionale dell'IA e calcolo matematico dei punteggi.
+- `src/middleware/auth.js`: Protezione delle rotte tramite API Key.
+
+### 🎨 FRONTEND (Client)
+- `static/index.html`: La struttura base della Single Page Application (SPA).
+- `static/js/state.js`: Gestione centralizzata dello stato (Single Source of Truth).
+- `static/js/ui.js`: Rendering dinamico della plancia e interazione utente.
+- `static/js/scrabble.js`: Motore delle regole (validazione posizionamento e dizionario).
+- `static/js/api.js`: Client HTTP con logica di retry automatica.
+
+---
+
+## 🛠️ Requisiti e Installazione
+
+### Prerequisiti
+- Node.js (versione 14 o superiore)
+- npm (Node Package Manager)
+
+### Installazione
+1. Clona il repository:
+   ```bash
+   git clone [https://github.com/tuo-username/scarabeo-arena.git](https://github.com/tuo-username/scarabeo-arena.git)
+   cd scarabeo-arena
+Installa le dipendenze:
+
+Bash
+npm install
+Avvia il server:
+
+Bash
+npm start
+Il server sarà attivo su http://localhost:3000. Puoi visualizzare la documentazione delle API su http://localhost:3000/api-docs.
