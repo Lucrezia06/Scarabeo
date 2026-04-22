@@ -69,6 +69,8 @@ Installa le dipendenze:
 Bash
 npm install
 Avvia il server:
+cd /workspaces/Scarabeo/Scarabeo/GameApi
+npm start
 
 Bash
 npm start
